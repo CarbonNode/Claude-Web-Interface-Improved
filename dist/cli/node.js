@@ -125,7 +125,7 @@ async function getEncodedProjectName(projectPath) {
       }
     }
     const normalizedPath = projectPath.replace(/\/$/, "");
-    const expectedEncoded = normalizedPath.replace(/[/\\:._]/g, "-");
+    const expectedEncoded = normalizedPath.replace(/[/\\:._ ]/g, "-");
     if (entries.includes(expectedEncoded)) {
       return expectedEncoded;
     }
